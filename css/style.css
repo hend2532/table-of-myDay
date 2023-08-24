@@ -1,0 +1,133 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: none;
+   direction: rtl;
+}
+/* start variables */
+:root{
+   --main-color:green;
+   --main-bg:##efefef;
+   --second-color:white;
+   --second-bg:black;
+}
+/* start mode */
+.mode{
+   display: flex;
+   gap: 10px;
+   justify-content: center;
+   width: fit-content;
+   margin-right: 10px;
+   margin-top: 10px;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mode .white{
+   color: black;
+   cursor: pointer;
+   background-color: white;
+   padding: 5px;
+   border-radius: 5px;
+   font-size: 13px;
+}
+.mode .black{
+   display: none;
+   color: white;
+   cursor: pointer;
+   background-color: black;
+   padding: 5px;
+   font-size: 13px;
+   border-radius: 5px;
+}
+/* end mode */
+/* end variables */
+/* start tasks */
+body{
+   background-color:var(--main-bg);
+}
+h2{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: var(--main-color);
+   text-align: center;
+   width: fit-content;
+   margin: auto;
+}
+.tasks{
+   width: 100vmin;
+   max-height: fit-content;
+   display: grid;
+   gap: 10px;
+   grid-template-columns: repeat(auto-fill,minmax(75px,1fr));
+   padding: 15px;
+   margin: 20px auto;
+   color: var(--main-color);
+   text-align: center;
+}
+.task{
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+textarea{
+   width: 65px;
+   min-height: auto;
+   height: 50px;
+   padding: 2px;
+   outline: none;
+   background-color: transparent;
+   color: rgb(12, 94, 1);
+   box-shadow: .5px .5px 5px #ccc;
+   resize: none;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   text-align: center;
+}
+textarea:hover{
+   box-shadow: .5px .5px 5px green;
+   border: 1px solid green;
+   border-radius: 5px;
+}
+.buttons{
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   justify-content: space-evenly;
+   margin: 10px;
+}
+i{
+   color: white;
+}
+.fa-check{
+   background-color: green;
+   width: 60px;
+   border-radius: 50%;
+}
+.fa-xmark{
+   background-color: red;
+   width: 60px;
+   border-radius: 50%;
+}
+.fa-check:hover,.fa-xmark:hover{
+   cursor: pointer;
+}
+.save,.delete{
+   color: white;
+   background-color: green;
+   padding: 4px;
+   border-radius: 5px;
+   font-size: 13px;
+   cursor: pointer;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.save:hover{
+   background-color: rgb(2, 188, 2);
+}
+.delete{
+   background-color: red;
+}
+.delete:hover{
+   background-color: rgb(178, 3, 3);
+}
+/* end tasks */
